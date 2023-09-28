@@ -2,6 +2,8 @@
 
 $json_dischi = file_get_contents('../data/dischi.json');
 
-var_dump($json_dischi);
+$dischi = json_decode($json_dischi);
 
-var_dump(json_decode($json_dischi));
+header('Content-Type: application/json');
+
+echo json_encode($dischi);
